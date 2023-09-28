@@ -1,33 +1,17 @@
 import React from 'react'
+import CartSummary from '../components/CartSummary'
+import { products } from '../data/products'
+import CartProducts from '../components/CartProducts';
 
 const Cart = () => {
+
+  const cartProducts = products.slice(0, 3);
+
   return (
     <div>
       <h3>My Cart</h3>
-
-      <div>
-        <button>Add a voucher</button>
-
-        <div>
-          <div className="d-flex">
-            <p>Sub Total</p>
-            <p>INR 5,870</p>
-          </div>
-          <div className="d-flex">
-            <p>VAT (%)</p>
-            <p>INR 0.00</p>
-          </div>
-          <div className="d-flex">
-            <p>Shipping fee</p>
-            <p>INR 80</p>
-          </div>
-          <div className="d-flex">
-            <p>Total</p>
-            <p>INR 5,950</p>
-          </div>
-        </div>
-        <button>Checkout</button>
-      </div>
+      <CartProducts products ={cartProducts}/>
+   
     </div>
   )
 }
