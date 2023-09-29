@@ -1,14 +1,15 @@
 import React, { useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { products } from '../data/products';
 import ProductDetail from '../components/ProductDetail';
 
 const Detail = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const {id} = useParams();
   const [selectedSize, setSelectedSize] = useState("");
  const sizes = ["S", "M", "L"];
-
+ 
 
  const product = products.find(product => product.id === parseInt(id));
 
@@ -17,11 +18,14 @@ const Detail = () => {
  setSelectedSize(sizeValue);
  } 
 
-
+console.log(location)
 
   return (
     <div>
      <h3>Details</h3>
+     <span 
+     onClick={()=>navigate(location?.state?.from)}
+     >back btn</span>
      <ProductDetail product={product}/>
     <p>Choose size</p>
      {sizes.map((size ,index )=> (

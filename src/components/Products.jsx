@@ -4,13 +4,15 @@ import Card from './Card'
 
 const Products = () => {
   return (
-    <>
+    <div className="product__container">
     {products.map(product =>(
       <Card 
+      
+      className="card"
       key={product.id}
       product={product}/>  
     ))}
-    </>
+    </div>
   )
 }
 
