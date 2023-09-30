@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { products } from "../data/products";
 import ProductDetail from "../components/ProductDetail";
-import ShopIcon from "../assets/shopping-bag.svg"
+import ShopIcon from "../assets/shopping-bag.svg";
 import "./Detail.css";
 import Header from "../components/Header";
 
@@ -20,8 +20,6 @@ const Detail = () => {
     setSelectedSize(sizeValue);
   };
 
-  console.log(location);
-
   return (
     <div className="detail__card">
       <Header heading="Details" />
@@ -38,22 +36,20 @@ const Detail = () => {
         </button>
       ))}
 
-      <div className="d-flex
-      bottom__sec
-      ">
+      <div
+        className="d-flex bottom__sec " >
         <div>
           <p className="price__text">Price</p>
           <p className="price__value">INR {product.price}</p>
         </div>
-    
-    
-        <button 
-        className="cart__btn"
-        onClick={() => navigate("/cart")}>
-              <img src={ShopIcon} 
-              
-        alt="shopping-icon" />
-          Add to Cart</button>
+
+        <button
+          className="cart__btn"
+          onClick={() => navigate("/cart", { state: { from: location } })}
+        >
+          <img src={ShopIcon} alt="shopping-icon" />
+          Add to Cart
+        </button>
       </div>
     </div>
   );

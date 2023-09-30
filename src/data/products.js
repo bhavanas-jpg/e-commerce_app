@@ -7,7 +7,8 @@ export const products =[
     price: "1,190",
     rating: "4.5",
     reviews: 45,
-    size: "L"
+    size: "L",
+    quantity: 2
     },
     {
         id: 2,
@@ -18,7 +19,8 @@ export const products =[
         discount: 52,
         rating: "4",
         reviews: 54,
-        size: "M"
+        size: "M",
+        quantity: 2
     },
     {
         id: 3,
@@ -28,7 +30,8 @@ export const products =[
         price: "1,690",
         rating: "3.8",
         reviews: 40,
-        size: "L"
+        size: "L",
+        quantity: 1
     },
     {
         id: 4,

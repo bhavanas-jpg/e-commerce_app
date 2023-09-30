@@ -1,22 +1,26 @@
 import React from 'react'
+import "../pages/Cart.css"
 
 const CartSummary = ({subTotal , total}) => {
   return (
     <>
          <div>
           <div className="d-flex">
-            <p>Sub Total</p>
-            <p>INR {subTotal}</p>
+            <p className="summary__text">Sub Total</p>
+            <p className="summary__value">INR {subTotal}</p>
           </div>
           <div className="d-flex">
-            <p>VAT (%)</p>
-            <p>INR 0.00</p>
+            <p className="summary__text">VAT (%)</p>
+            <p className="summary__value">INR 0.00</p>
           </div>
-          <div className="d-flex">
-            <p>Shipping fee</p>
-            <p>INR 80</p>
+          <div className="d-flex ">
+            <p className="summary__text">Shipping fee</p>
+            <p className="summary__value">INR 80</p>
           </div>
-          <div className="d-flex">
+          <div className="border_cnt">
+
+          </div>
+          <div className="d-flex total__text">
             <p>Total</p>
             <p>INR {total}</p>
           </div>
