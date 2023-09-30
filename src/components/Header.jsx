@@ -7,10 +7,11 @@ import ".././pages/Detail.css";
 const Header = ({ heading }) => {
   const navigate = useNavigate();
   const location = useLocation();
+  
   return (
     <div className="header">
       <img
-        onClick={() => navigate(location?.state?.from)}
+        onClick={() => navigate(location?.state?.from || "/")}
         src={backArrow}
         alt="back arrow icon"
       />
