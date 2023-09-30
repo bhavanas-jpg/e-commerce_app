@@ -1,5 +1,6 @@
 import React from 'react'
 import Detail from "../pages/Detail"
+import heart from "../assets/activity-heart.svg"
 import { useLocation, useNavigate } from 'react-router-dom';
 
 const Card = ({product}) => {
@@ -13,10 +14,14 @@ const Card = ({product}) => {
       navigate(`/product/${id}`, { state: { from: location } })}
     >
      <img src={img} alt={name} />
-     <p>{name}</p>
-     <p>INR {price}
+     <p className="product__name">{name}</p>
+     <p className="product__price">INR {price}
      {discount ? <span> -{discount }% </span> : null } 
      </p>
+
+     <img
+     className="wishlist__icon"
+     src={heart} alt="wishlist-icon" />
     </div>
   )
 }

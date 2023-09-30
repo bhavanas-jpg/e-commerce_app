@@ -66,9 +66,58 @@ input::placeholder {
   flex-wrap: wrap;
 }
 .card {
-  padding: 2px;
+  padding: 0 10px 10px 10px;
   flex: 0 50%;
+  position: relative;
 }
 .card img {
   border-radius: 10px;
+  width: 100%;
+}
+.card .product__name {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  margin-top: 10px;
+}
+.card .product__price {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 7px;
+}
+.wishlist__icon {
+  width: 37px !important;
+  height: 34px;
+  position: absolute;
+  top: 1rem;
+  box-shadow: rgba(82, 82, 82, 0.25);
+  right: 17px;
+}
+.navbar__container {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: -6px;
+}
+.bottom__sec {
+  position: fixed;
+  padding: 17px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 1);
+}
+.price__text{
+font-size: 16px;
+line-height: 21px;
+color: rgba(0, 0, 0, 0.6)
+}
+.price__value{
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+}
+.detail__container{
+  position: relative;
 }

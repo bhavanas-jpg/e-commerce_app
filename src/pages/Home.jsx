@@ -4,6 +4,7 @@ import notificationIcon from "../assets/notification_icon.svg";
 import filterIcon from "../assets/filter_icon.svg";
 import searchIcon from "../assets/search-lg.svg"
 import { useLocation } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 const Home = () => {
   const location = useLocation();
@@ -35,6 +36,7 @@ const Home = () => {
      <button>Kids</button>
      </div>
     <Products />
+    <Navbar />
     </div>
   )
 }
