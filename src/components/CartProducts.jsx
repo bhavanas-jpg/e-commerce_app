@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import CartSummary from "./CartSummary";
 import trash from "../assets/trash.svg";
+import arrow from "../assets/arrow.svg"
 
 const CartProducts = ({ products }) => {
   const [cartProducts, setCartProducts] = useState(products);
@@ -61,7 +62,9 @@ const CartProducts = ({ products }) => {
           total={total.toLocaleString()}
         />
         <div className="bottom__sec">
-          <button className="checkout__btn">Checkout</button>
+          <button className="checkout__btn">Checkout
+          <img src={arrow} alt="arrow right icon" />
+          </button>
         </div>
       </div>
     </div>

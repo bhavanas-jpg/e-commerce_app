@@ -16,6 +16,7 @@
   align-items: center;
   border-radius: 10px;
   width: 100%;
+  letter-spacing: 1px;
 }
 .summary__text {
   font-size: 16px;
@@ -115,5 +116,8 @@
 .cart__text .delete__btn{
   border: none;
   outline: none;
+}
+.checkout__btn img{
+  margin-left: 10px;
 }
 
